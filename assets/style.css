@@ -1,0 +1,151 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.sidebar {
+    background: #001f3f; 
+    color: #fff;
+    padding: 25px;
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #6495ED;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav li.active a,
+.sidebar nav a:hover {
+    background: linear-gradient(90deg, #1E90FF, #4169E1); 
+}
+
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.content h2 {
+    color: #001f3f;
+    border-bottom: 3px solid #6495ED;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.registration-form .form-group {
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.registration-form input:focus {
+    outline: none;
+    border-color: #001f3f;
+}
+
+.registration-form button {
+    background: #001f3f;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+    background: #4169E1;
+}
+
+.pendaftar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.pendaftar-table th, .pendaftar-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.pendaftar-table thead {
+    background-color: #001f3f;
+    color: #fff;
+}
+
+.pendaftar-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.pendaftar-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
